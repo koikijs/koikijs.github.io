@@ -1,0 +1,50 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+body {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+header {
+  padding: 80px 30px;
+}
+header h2 {
+  font-size: 3.6rem;
+}
+.nav {
+  top: 0;
+  right: 0;
+  margin: 20px 40px;
+  position: fixed;
+}
+.nav li {
+  display: inline-block;
+}
+.logo {
+  top: 0;
+  left: 0;
+  margin: 20px 40px;
+  width: 160px;
+}
+.logo a {
+  width: inherit;
+  height: 40px;
+}
+.logo a p {
+  width: inherit;
+  margin: 0px;
+}
+.logo a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.logo a span {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 2.6rem;
+  vertical-align: middle;
+}
