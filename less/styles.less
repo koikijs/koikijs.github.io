@@ -1,22 +1,35 @@
 @charset "UTF-8";
+// colors
+@base-color: #1C1C1C;
+@black: #1C1C1C;
+@white: #FFFFFB;
+@gray: #656765;
+@yellow: #F9BF45;
+// font
+@base-font: 'Roboto';
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
+  font-family: @base-font, sans-serif;
 }
 
 body {
   text-align: center;
+  color: @base-color;
 }
 
 a {
   text-decoration: none;
+  color: @base-color;
 }
 
-header {
-  padding: 80px 30px;
-  h2 {
-    font-size:3.6rem;
-  }
+header, .section {
+  border-bottom: 1px solid @black;
+}
+
+footer {
+	padding: 12px 0;
+	font-size: 1.6rem;
 }
 
 .nav {
@@ -24,6 +37,7 @@ header {
   right: 0;
   margin: 20px 40px;
   position: fixed;
+
   li {
     display: inline-block;
   }
@@ -34,23 +48,111 @@ header {
   left: 0;
   margin: 20px 40px;
   width: 160px;
+
   a {
     width: inherit;
     height: 40px;
+    color: @black;
+
     p {
       width: inherit;
-      margin: 0px;
+      margin: 0;
     }
+
     img {
       width: 40px;
       height: 40px;
       margin-right: 20px;
       vertical-align: middle;
     }
+
     span {
-      font-family: 'Maven Pro', sans-serif;
+      font-family: @base-font, sans-serif;
       font-size: 2.6rem;
       vertical-align: middle;
     }
+  }
+}
+
+.section {
+  padding: 30px;
+  font-size: 2.6rem;
+
+  h2 {
+    font-size: 3.6rem;
+    font-weight: normal;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .title {
+    max-width: 400px;
+    margin: 20px auto;
+    animation: appearence 1.5s forwards;
+  }
+
+  &.yellow {
+    background-color: @yellow;
+    color: @white;
+  }
+
+  &.black {
+    background-color: @gray;
+    color: @white;
+  }
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  //smartphone
+  @media (max-width: 768px) {
+      flex-direction: column;
+  }
+  .product {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    img {
+      background: @yellow linear-gradient(hsla(0,0%,100%,.1), transparent);
+      max-width: 300px;
+      transform: scale(0.9);
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.0);
+      }
+    }
+  }
+}
+
+
+.members {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  //smartphone
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  .member {
+    img {
+      max-width:160px;
+    }
+  }
+}
+@keyframes appearence {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
