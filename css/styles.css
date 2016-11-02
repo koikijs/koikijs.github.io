@@ -15,9 +15,21 @@ header,
 .section {
   border-bottom: 1px solid #1C1C1C;
 }
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: #FFFFFB;
+}
 footer {
   padding: 12px 0;
   font-size: 1.6rem;
+}
+.github {
+  top: 0;
+  right: 0;
+  margin: 20px 40px;
+  position: fixed;
 }
 .nav {
   top: 0;
@@ -68,7 +80,7 @@ footer {
 }
 .section .title {
   max-width: 400px;
-  margin: 20px auto;
+  margin: 100px auto 20px;
   animation: appearence 1.5s forwards;
 }
 .section.yellow {
